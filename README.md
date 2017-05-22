@@ -60,7 +60,7 @@ echo $gopherstr;
 
 `$ curl -s <$gopherstr>`
 
-    获取到输出该网络流的输出:
+* 获取到输出该网络流的输出:
 
 <pre>
 +OK
